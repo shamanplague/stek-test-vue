@@ -3,7 +3,7 @@ import { computed, type PropType } from 'vue';
 import type { Organization, OrganizationField } from '../../types/Organization';
 import CommonTable from '../common/CommonTable.vue';
 import type { TableAction, TableHeader, TableItem } from '../types';
-import type { EntityRepositorySorts, SortDirections } from '@/types/Repository';
+import type { EntityRepositorySorts } from '@/types/Repository';
 import { organizationFields } from '../../types/Organization';
 import { typedEntries } from '@/helpers/helpers';
 

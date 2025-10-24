@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-import { computed, onMounted, ref, watch, watchEffect } from 'vue'
+import { computed, onMounted, ref, watch } from 'vue'
 import CommonModal from './components/common/CommonModal.vue'
 import Paginator from './components/common/Paginator.vue'
 import { OrganizationsRepositoryFactory } from './repositories/organizations/OrganizationsRepository'

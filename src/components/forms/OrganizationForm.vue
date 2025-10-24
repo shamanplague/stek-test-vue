@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { toFlatObject } from '@/helpers/helpers';
 import type { Organization } from '@/types/Organization';
-import { computed, onMounted, reactive, watch, watchEffect, type PropType } from 'vue';
+import { computed, onMounted, reactive, watchEffect, type PropType } from 'vue';
 
 
 const props = defineProps({

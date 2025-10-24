@@ -88,7 +88,7 @@ console.log(props.actions)
           <div class="common-table__cell common-table__cell--action" @click.stop>
             <template v-for="action in actions">
               <div class="action-button" @click.stop="() => action.callback(row)">
-                <img :src="`/public/icons/${action.icon}.svg`">
+                <img :src="`/icons/${action.icon}.svg`">
               </div>
             </template>
             </div>

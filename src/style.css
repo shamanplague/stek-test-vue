@@ -1,79 +1,187 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+    margin: 0;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.container {
+    margin: 10px;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.common-table {
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    padding: 1px;
 }
 
-.card {
-  padding: 2em;
+.common-table__no-data {
+    background-color: white;
+    padding: 10px;
+    text-align: center;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.common-table__header {
+    display: flex;
+    gap: 1px
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.common-table__header .common-table__cell {
+    background-color: #ffffff47;
+    cursor: pointer;
+    user-select: none;
+}
+
+.common-table__row {
+    display: flex;
+    gap: 1px;
+    cursor: pointer;
+}
+
+.common-table__row:hover {
+    opacity: 0.9;
+}
+
+.common-table__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1px
+}
+
+.common-table__cell {
+    background-color: white;
+    width: 24%;
+    padding: 10px;
+    word-break: break-word;
+}
+
+.common-table__cell--action {
+    display: flex;
+    justify-content: center;
+    width: 4%;
+}
+
+.common-table__row--gray .common-table__cell {
+    background-color: #ffffffc0;
+}
+
+.paginator-wrapper {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.paginator {
+    display: flex;
+    gap: 10px;
+}
+
+.paginator__number-container {
+    display: flex;
+    gap: 10px;
+}
+
+.paginator__number {
+    user-select: none;
+    cursor: pointer;
+}
+
+.paginator__number--current {
+    color: red
+}
+
+.paginator__button {
+    cursor: pointer;
+}
+
+.sort-arrow-up::after {
+    display: inline-block;
+    margin-left: 5px;
+    content: '\2191';
+}
+
+.sort-arrow-down::after {
+    content: '\2193';
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.top-panel {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.form-modal {
+    display: flex;
+    width: 400px;
+    height: 600px;
+    border-radius: 10px;
+    outline: 2px solid black;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 32px 16px;
+    flex-direction: column;
+}
+
+.form-modal__title {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.close-button {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    cursor: pointer;
+}
+
+.close-button__icon {
+    width: 16px;
+    height: 16px;
+    background-color: red;
+    clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+}
+
+.fields-section {
+    flex-grow: 1;
+}
+
+.fields-section__field {
+    margin-bottom: 12px;
+}
+
+.fields-section__label {
+    margin-bottom: 4px;
+}
+
+.fields-section__input {
+    width: 97%;
+    padding: 5px;
+}
+
+.form-content {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+.buttons-section {
+    display: flex;
+    gap: 10px
+}
+
+.buttons-section__button {
+    flex-grow: 1;
+    height: 30px;
+}
+
+.action-button {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    z-index: 10;
 }
